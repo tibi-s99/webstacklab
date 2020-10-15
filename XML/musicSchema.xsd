@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/musicSchema"
+xmlns:tns="http://www.example.org/musicSchema" elementFormDefault="qualified">
+<complexType name="musictype">
+<sequence>
+<element name="music" type="tns:musictype">
+</element>
+</sequence>
+</complexType>
+<complexType name="musicstype">
+<sequence>
+<element name="song" type="string">
+</element>
+<element name="artist" type="tns:myArtist">
+</element>
+<element name="size" type="tns:mySize">
+</element>
+<element name="price" type="tns:myPrice">
+</element>
+<element name="download" type="string">
+</element>
+</sequence>
+<attribute name="mid" type="ID" use="required">
+</attribute>
+</complexType>
+<element name="globalmusics" type="tns:musictype"></element>
+<simpleType name="myArtist">
+<restriction base="string">
+<pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/>
+</restriction>
+</simpleType>
+<simpleType name="mySize">
+<restriction base="integer">
+<minInclusive value="3"></minInclusive>
+<maxInclusive value="10"></maxInclusive>
+</restriction>
+</simpleType>
+<simpleType name="myPrice">
+<restriction base="integer">
+<minInclusive value="50"></minInclusive>
+<maxInclusive value="500"></maxInclusive>
+</restriction>
+</simpleType>
+
+</schema>
