@@ -28,14 +28,14 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    alert("You have subscribed already. Welcome again " + user);
+    alert("You have already subscribed for trial access " + user);
   } else {
      user = prompt("To get free trial access, you need to subscribe. Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
      }
   }
-  window.location = "index.html";
+  window.location = "artist.html";
 }
 </script>
 </head>
