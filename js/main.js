@@ -1,17 +1,10 @@
-/* ===================================
---------------------------------------
-  SolMusic HTML Template
-  Version: 1.0
---------------------------------------
-======================================*/
-
 
 'use strict';
 
 $(window).on('load', function() {
-	/*------------------
-		Preloder
-	--------------------*/
+
+		/*Preloder*/
+
 	$(".loader").fadeOut();
 	$("#preloder").delay(400).fadeOut("slow");
 
@@ -23,9 +16,7 @@ $(window).on('load', function() {
 });
 
 (function($) {
-	/*------------------
-		Navigation
-	--------------------*/
+		/*Navigation*/
 	$(".main-menu").slicknav({
         appendTo: '.header-section',
 		allowParentLinks: true,
@@ -36,9 +27,7 @@ $(window).on('load', function() {
 	$('.slicknav_nav').prepend('<li class="header-right-warp"></li>');
     $('.header-right').clone().prependTo('.slicknav_nav > .header-right-warp');
 
-	/*------------------
-		Background Set
-	--------------------*/
+		/*Background Set*/
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');

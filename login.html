@@ -1,35 +1,80 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-  <title>Welcome To Login Form</title>
-  <link rel="stylesheet" href="css/login.css"/>
-  <script src="js/login.js"></script>
-  </head>
+<html>
 
-  <body>
-  <!-- Main div code -->
-  <div id="main">
-  <div class="h-tag">
-  <h2>Login to your Account</h2>
-  </div>
-  <div class="login" id="login">
-  <table cellspacing="2" align="center" cellpadding="8" border="0">
-  <tr>
-  <td align="right">Enter Username :</td>
-  <td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
-  </tr>
-  <tr>
-  <td align="right">Enter Password :</td>
-  <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
-  </tr>
-  <tr>
-  <td></td>
-  <td>
-  <input type="submit" value="Login" id="log" class="btn" onclick="login()" />
-</td>
-  </tr>
-  </table>
-  </div>
-  </div>
-  </body>
-  </html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\login.css">
+</head>
+
+<body>
+    <script>
+        function Setcookie()
+        {
+            if(document.getElementById("rem_check").checked==true)
+            {
+                document.cookie="username="+document.getElementById("username").value+";expires=Thu, 19 Nov 2020 23:50:00 UTC";;
+                document.cookie="password="+document.getElementById("password").value;  
+                alert("Login Successfull");
+                 window.location = "index.html";
+
+              
+        }
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var Allcookies,Temp;
+                Allcookies=document.cookie.split(";");   
+                for(var i=0;i<Allcookies.length;i++)
+                {
+                    Temp=Allcookies[i].split("=");
+                    if(Temp[0]=="username")
+                    {
+                        document.getElementById("username").value=Temp[1];
+                    }
+                    if(Temp[0]==" password")
+                    {
+                        document.getElementById("password").value=Temp[1];
+                    }
+                }
+            }
+
+        }
+    </script>
+    <h1 class="login-head">Login</h1>
+    <div>
+        <form>
+        <table class="login-table">
+            <tr>
+                <td>Username</td>
+                <td><input class="user" type="text" placeholder="Enter Username" id="username" name="uname" required></td>
+            </tr>
+            <tr>
+                <td>
+                    Password
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                                   
+                             
+                    <input type="checkbox" id="rem_check" checked="checked" name="remember"> Remember me
+                </td>                
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="login-submit" onclick="Setcookie()">Login</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+
+
+    
+</body>
+
+</html>
