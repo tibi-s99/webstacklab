@@ -1,0 +1,26 @@
+[
+    {
+      "name": "BLANK SPACE",
+      "artist" : "TAYLOR SWIFT",
+      "detail": {
+        "release": [" ", "JANUARY 2019"],
+        "ft": ["TAYLOR SWIFT"]
+      }
+    },
+    {
+      "name": "SHAKE IT OFF",
+      "artist" : "TAYLOR SWIFT",
+      "detail": {
+        "release": [" ","JUNE 2020"],
+        "ft": ["TAYLOR SWIFT"]
+      }
+    },
+    {
+      "name": "LEAN ON",
+      "artist" : "MAJOR LAZER",
+      "detail": {
+        "release": [" ","MAY 2019"],
+        "ft": ["MO"]
+      }
+    }
+  ]

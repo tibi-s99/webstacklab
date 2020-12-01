@@ -1,0 +1,26 @@
+[
+    {
+      "name": "SEE YOU AGAIN",
+      "artist" : "WIZ KNALIFA",
+      "detail": {
+        "release": [" ","MAY 2019"],
+        "ft": ["CHARLIE", "PUTH"]
+      }
+    },
+    {
+      "name": "SORRY",
+      "artist" : "JUSTIN BIEBER",
+      "detail": {
+        "release": [" ","JUNE 2019"],
+        "ft": ["JUSTIN BIEBER"]
+      }
+    },
+    {
+      "name": "UPTOWN FUNK",
+      "artist" : "MARK RONSON",
+      "detail": {
+        "release": [" ","JULY 2018"],
+        "ft": ["BRUNO MARS"]
+      }
+    }
+  ]

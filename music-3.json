@@ -1,0 +1,26 @@
+[
+    {
+      "name": "CLOSER",
+      "artist" : "CHAINSMOKERS",
+      "detail": {
+        "release": [" ","JULY 2018"],
+        "ft": ["HALSEY"]
+      }
+    },
+    {
+      "name": "PARTY ROCK ANTHEM",
+      "artist" : "LMFAO",
+      "detail": {
+        "release": [" ", "JULY 2020"],
+        "ft": ["LAUREN BENNETT"]
+      }
+    },
+    {
+      "name": "LOVE THE WAY YOU LIE",
+      "artist" : "EMINEM",
+      "detail": {
+        "release": [" ","JULY 2020"],
+        "ft": ["RIHANNA"]
+      }
+    }
+  ]
