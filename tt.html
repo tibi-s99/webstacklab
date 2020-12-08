@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="tt.css">
+    <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+    <script src="tt.js"></script>
+  </head>
+
+  <body ng-app="App">
+    <br><h1>UPDATE YOUR SONG LIST HERE.......</h1><br><br>
+
+
+  <div ng-controller="CrudCtrl">
+    <table>
+      <tr>
+        <td>TrackName</td>
+        <td>Artist</td>
+        <td>Price</td>
+        <td><span ng-click="add()">Add New</span></td>
+      </tr>
+      <tr ng-repeat="music in musics">
+        <td>
+          <input type="text" ng-model="music.name" ng-show="music.editable">
+          <span ng-hide="music.editable">{{ music.name }}</span>
+        </td>
+        <td>
+          <input type="text" ng-model="music.artist" ng-show="music.editable">
+          <span ng-hide="music.editable">{{ music.artist }}</span>
+        </td>
+        <td>
+            <input type="number" ng-model="music.price" ng-show="music.editable">
+            <span ng-hide="music.editable">{{ music.price }}</span>
+          </td>
+          <td>
+          <span ng-click="edit($index)" ng-hide="music.editable">Edit</span>
+          <span ng-click="save($index)" ng-show="music.editable">Save</span>
+          <span ng-click="delete($index)"> | Delete</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </body>
+
+</html>
